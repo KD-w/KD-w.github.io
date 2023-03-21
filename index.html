@@ -4,17 +4,36 @@
 	<title>My Webpage</title>
 	<style>
 		/* Add your CSS styles here */
-		body {
-			background-image: url("https://source.unsplash.com/random/1920x1080");
-			background-size: <length> <length>;
-			background-position: <length> <length>;
-			text-align: center;
+		.box {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			transition: background-color 1s;
+		}
+		.box:hover {
+			background-color: blue;
+		}
+		.circle {
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			border-radius: 50%;
+			animation: rotate 2s linear infinite;
+		}
+		@keyframes rotate {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
 		}
 	</style>
 </head>
 <body>
 	<!-- Add your HTML content here -->
-	<h1>欢迎来到旅游网站</h1>
+	<div class="box"></div>
+	<div class="circle"></div>
 	<script>
 		// Add your JavaScript code here
 	</script>
